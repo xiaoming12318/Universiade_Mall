@@ -1,0 +1,19 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 975409698ljj
+    url: jdbc:mysql://localhost:3306/project?useSSL=false
+mybatis:
+  type-aliases-package: cn.edu.pojo
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+
+
