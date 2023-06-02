@@ -1,13 +1,17 @@
 <script setup>
-   const emit=defineEmits(['get-message'])
-  
-  const sendMsg=()=>{
-  	//触发自定义事件，并传递参数
-  	emit('get-message','this is son msg')
-  }
+      import {inject} from 'vue'
+      const message=inject("parentMessage")
+      const count=inject("count")
+      const setCount=inject("set_count")
+      const emit=defineEmits(['get-message'])
+      console.log(count)
+      
+ 
 </script>
 
 <template>
-      <button @click="sendMsg">sendMsg </button>
-
+      <button @click="setCount">底层setCount </button>
+      <div>底层组件</div>
+      <div>{{ message }}</div>
+      <div>{{ count}}</div>
 </template>
