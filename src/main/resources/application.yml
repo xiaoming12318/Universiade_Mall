@@ -7,11 +7,26 @@ spring:
     username: root
     password: 975409698ljj
     url: jdbc:mysql://localhost:3306/project?useSSL=false
+
+  main:
+    allow-bean-definition-overriding: true
+
+  redis:
+    port: 6379
+    host: 192.168.26.131
+    database: 0
+    password: 975409698ljj
+  cache:
+    redis:
+      time-to-live: 1800000
+
 mybatis:
   type-aliases-package: cn.edu.pojo
   mapper-locations: classpath*:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 
 
 
